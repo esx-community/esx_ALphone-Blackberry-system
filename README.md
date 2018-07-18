@@ -1,9 +1,7 @@
-# esx_ALphone
+# esx_ALphone-Blackberry-system
+There's no one supporting this script, you're on your own
 
-
-NO SUPPORT
-
-!!! You cant change design/graphics. !!!
+## You are not allowed to change the background & graphics
 
 95% of issue is thoose scripts are adapted to our server so : rename esx_ALphone to esx_phone3 | add blackberry on database and gg wp.
 
