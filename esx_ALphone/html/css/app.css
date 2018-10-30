@@ -8,31 +8,31 @@ body {
 
 #phone {
 	display: none;
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  font-family: Helvetica, Arial;
-  font-size: 14px;
-  width: 250px;
-  height: 535px;
-  border-radius: 43px;
-  border: 1px solid #000;
-  background-image: url('../img/phone.png');
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	font-family: Helvetica, Arial;
+	font-size: 14px;
+	width: 250px;
+	height: 535px;
+	border-radius: 43px;
+	border: 1px solid #000;
+	background-image: url('../img/phone.png');
 }
 
 #screen {
-  background-image: url('../img/backgroundPhone.png');
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 235px;
-  height: 430px;
-  overflow: hidden;
+	background-image: url('../img/backgroundPhone.png');
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 235px;
+	height: 430px;
+	overflow: hidden;
 }
 
 .status-bar {
-	width : 100%;
+	width: 100%;
 	height: 16px;
 	background-color: green;
 }
@@ -44,106 +44,106 @@ body {
 
 .app-inner {
 	display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+	flex-direction: row;
+	flex-wrap: wrap;
 	max-height: 100%;
 	padding: 5px 5px;
 	overflow: hidden;
 }
 
 .status-bar {
-  width: inherit;
-  line-height: 18px;
-  font-size: 12px;
-  text-align: left;
-  font-weight: bold;
-  background: rgba(0, 0, 0, 0.9);
-  color: #ddd;
-  z-index: 101
+	width: inherit;
+	line-height: 18px;
+	font-size: 12px;
+	text-align: left;
+	font-weight: bold;
+	background: rgba(0, 0, 0, 0.9);
+	color: #ddd;
+	z-index: 101
 }
 
 .status-bar ul.signal {
-    float: left;
-    margin: 5px 5px 0 -35px;
-    position: relative;
-    height: 10px;
-    width: 14px
+	float: left;
+	margin: 5px 5px 0 -35px;
+	position: relative;
+	height: 10px;
+	width: 14px
 }
 
 .status-bar ul.signal li {
-    float: left;
-    display: block;
-    width: 2px;
-    margin: 0 1px 0 0;
-    background: #ddd;
-    position: absolute;
-    bottom: 0
+	float: left;
+	display: block;
+	width: 2px;
+	margin: 0 1px 0 0;
+	background: #ddd;
+	position: absolute;
+	bottom: 0
 }
 
 .status-bar ul.signal li:nth-child(1) {
-    height: 2px
+	height: 2px
 }
 
 .status-bar ul.signal li:nth-child(2) {
-    height: 3px;
-    margin-left: 3px
+	height: 3px;
+	margin-left: 3px
 }
 
 .status-bar ul.signal li:nth-child(3) {
-    height: 5px;
-    margin-left: 6px
+	height: 5px;
+	margin-left: 6px
 }
 
 .status-bar ul.signal li:nth-child(4) {
-    height: 7px;
-    margin-left: 9px;
-    background: #8a8a8a;
+	height: 7px;
+	margin-left: 9px;
+	background: #8a8a8a;
 }
 
 .status-bar ul.signal li:nth-child(5) {
-    height: 9px;
-    margin-left: 12px;
-    background: #8a8a8a;
+	height: 9px;
+	margin-left: 12px;
+	background: #8a8a8a;
 }
 
 .status-bar ul.signal li.no-signal {
-    height: 1px
+	height: 1px
 }
 
 .status-bar div.time {
-  margin-top: -18px;
-  margin-left: 100px;
+	margin-top: -18px;
+	margin-left: 100px;
 }
 
 .status-bar .battery {
-    position: absolute;
-    top: 4px;
-    right: 5px;
-    width: 16px;
-    height: 9px;
+	position: absolute;
+	top: 4px;
+	right: 5px;
+	width: 16px;
+	height: 9px;
 }
 
 .status-bar .battery .percentage {
-    position: absolute;
-    top: -4px;
-    left: -40px
+	position: absolute;
+	top: -4px;
+	left: -40px
 }
 
 .status-bar .battery i {
-    width: 1px;
-    height: 3px;
-    position: absolute;
-    top: 2px;
-    right: -3px;
-    border: 1px solid #ddd
+	width: 1px;
+	height: 3px;
+	position: absolute;
+	top: 2px;
+	right: -3px;
+	border: 1px solid #ddd
 }
 
 .status-bar .icons .right {
-    position: absolute;
-    width: 94px;
-    height: 40px;
-    top: -11px;
-    right: 70px
+	position: absolute;
+	width: 94px;
+	height: 40px;
+	top: -11px;
+	right: 70px
 }
 
 /* App : Home */
@@ -157,22 +157,22 @@ body {
 #app-home .menu-icon .counter {
 	position: relative;
 	display: inline-block;
-  background: #FF0000;
-  border-radius: 90px;
-  min-width: 16px;
-  height: 16px;
-  color: #FFF;
-  text-align: center;
-  margin-top: -50px;
-  margin-left: 30px;
-  padding: 1px;
-  font-weight: bold;
-  border: 1px solid #FFF;
+	background: #FF0000;
+	border-radius: 90px;
+	min-width: 16px;
+	height: 16px;
+	color: #FFF;
+	text-align: center;
+	margin-top: -50px;
+	margin-left: 30px;
+	padding: 1px;
+	font-weight: bold;
+	border: 1px solid #FFF;
 }
 
 #app-home .menu-icon-inner {
-  transform: translateX(-50%);
-  margin-left: 50%;
+	transform: translateX(-50%);
+	margin-left: 50%;
 	width: 32px;
 	height: 32px;
 	border-radius: 5px;
@@ -191,9 +191,9 @@ body {
 	height: 32px;
 	margin-left: 16px;
 	margin-top: 16px;
-  transform: translate(-16px, -8px);
-  color: #FFF;
-  font-size: 1.2em;
+	transform: translate(-16px, -8px);
+	color: #FFF;
+	font-size: 1.2em;
 }
 
 #app-home .menu-icon-contacts .menu-icon-inner {
@@ -280,7 +280,6 @@ body {
 	background-color: #D08A04;
 }
 
-
 /* App : Messages */
 
 #app-messages {
@@ -308,7 +307,6 @@ body {
 #app-messages .contact:nth-child(even) {
 	background-color: #000;
 }
-
 
 #app-messages .contact-name {
 	display: inline-block;
@@ -361,36 +359,36 @@ body {
 }
 
 #app-incoming-call .contact-actions-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  height: 50%;
-  position: absolute;
-  bottom: 0;
-  margin-left: -5px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	bottom: 0;
+	margin-left: -5px;
 }
 
 #app-incoming-call .contact-action {
-  flex-basis: 50%;
-  text-align: center;
+	flex-basis: 50%;
+	text-align: center;
 }
 
 #app-incoming-call .contact-action i {
-  font-size: 3em;
-  border-radius: 90px;
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
-  color: #111;
+	font-size: 3em;
+	border-radius: 90px;
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	color: #111;
 }
 
 #app-incoming-call .contact-action.action-accept i {
-  background-color: #26a007;
+	background-color: #26a007;
 }
 
 #app-incoming-call .contact-action.action-deny i {
-  background-color: #FF0000;
+	background-color: #FF0000;
 }
 
 /* App : Contacts */
@@ -401,9 +399,9 @@ body {
 }
 
 #app-contacts .contact-actions div {
-  padding: 5px;
-  width: 215px;
-  text-align: center;
+	padding: 5px;
+	width: 215px;
+	text-align: center;
 }
 
 #app-contacts .contact-actions div.selected {
@@ -433,7 +431,6 @@ body {
 	background-color: #000;
 }
 
-
 #app-contacts .contact-name, #app-contacts .contact-number {
 	display: inline-block;
 }
@@ -442,7 +439,7 @@ body {
 	float: right;
 }
 
-#app-contacts .contact-number:before{
+#app-contacts .contact-number:before {
 	content: '#';
 }
 
@@ -497,29 +494,29 @@ body {
 }
 
 #app-contact-actions .contact-actions-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  height: 50%;
-  position: absolute;
-  bottom: 0;
-  margin-left: -5px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	bottom: 0;
+	margin-left: -5px;
 }
 
 #app-contact-actions .contact-action.action-call {
-  flex-basis: 50%;
-  text-align: center;
+	flex-basis: 50%;
+	text-align: center;
 }
 
 #app-contact-actions .contact-action.action-call i {
-  font-size: 3em;
-  background-color: #26a007;
-  border-radius: 90px;
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
-  color: #111;
+	font-size: 3em;
+	background-color: #26a007;
+	border-radius: 90px;
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	color: #111;
 }
 
 #app-contact-actions .contact-action.action-message {
@@ -528,63 +525,123 @@ body {
 }
 
 #app-contact-actions .contact-action.action-message i {
-  font-size: 3em;
-  background-color: #0480F4;
-  border-radius: 90px;
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
-  color: #111;
+	font-size: 3em;
+	background-color: #0480F4;
+	border-radius: 90px;
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	color: #111;
 }
 
 /* App : Contact Action Call */
 
 @keyframes circle-light-1 {
-	0%   { color: #B4CEFF; }
-	25%  { color: #FFFFFF; }
-	50%  { color: #005AFF; }
-	75%  { color: #3079FF; }
-	100% { color: #6A9FFF; }
+	0% {
+		color: #B4CEFF;
+	}
+	25% {
+		color: #FFFFFF;
+	}
+	50% {
+		color: #005AFF;
+	}
+	75% {
+		color: #3079FF;
+	}
+	100% {
+		color: #6A9FFF;
+	}
 }
 
 @keyframes circle-light-reverse-1 {
-	0%   { color: #6A9FFF; }
-	25%  { color: #3079FF; }
-	50%  { color: #005AFF; }
-	75%  { color: #FFFFFF; }
-	100% { color: #B4CEFF; }
+	0% {
+		color: #6A9FFF;
+	}
+	25% {
+		color: #3079FF;
+	}
+	50% {
+		color: #005AFF;
+	}
+	75% {
+		color: #FFFFFF;
+	}
+	100% {
+		color: #B4CEFF;
+	}
 }
 
 @keyframes circle-light-2 {
-	0%   { color: #3079FF; }
-	25%  { color: #6A9FFF; }
-	50%  { color: #B4CEFF; }
-	75%  { color: #FFFFFF; }
-	100% { color: #005AFF; }
+	0% {
+		color: #3079FF;
+	}
+	25% {
+		color: #6A9FFF;
+	}
+	50% {
+		color: #B4CEFF;
+	}
+	75% {
+		color: #FFFFFF;
+	}
+	100% {
+		color: #005AFF;
+	}
 }
 
 @keyframes circle-light-reverse-2 {
-	0%   { color: #005AFF; }
-	25%  { color: #FFFFFF; }
-	50%  { color: #B4CEFF; }
-	75%  { color: #6A9FFF; }
-	100% { color: #3079FF; }
+	0% {
+		color: #005AFF;
+	}
+	25% {
+		color: #FFFFFF;
+	}
+	50% {
+		color: #B4CEFF;
+	}
+	75% {
+		color: #6A9FFF;
+	}
+	100% {
+		color: #3079FF;
+	}
 }
 
 @keyframes circle-light-3 {
-	0%   { color: #005AFF; }
-	25%  { color: #3079FF; }
-	50%  { color: #6A9FFF; }
-	75%  { color: #B4CEFF; }
-	100% { color: #FFFFFF; }
+	0% {
+		color: #005AFF;
+	}
+	25% {
+		color: #3079FF;
+	}
+	50% {
+		color: #6A9FFF;
+	}
+	75% {
+		color: #B4CEFF;
+	}
+	100% {
+		color: #FFFFFF;
+	}
 }
 
 @keyframes circle-light-reverse-3 {
-	0%   { color: #FFFFFF; }
-	25%  { color: #B4CEFF; }
-	50%  { color: #6A9FFF; }
-	75%  { color: #3079FF; }
-	100% { color: #005AFF; }
+	0% {
+		color: #FFFFFF;
+	}
+	25% {
+		color: #B4CEFF;
+	}
+	50% {
+		color: #6A9FFF;
+	}
+	75% {
+		color: #3079FF;
+	}
+	100% {
+		color: #005AFF;
+	}
 }
 
 #app-contact-action-call {
@@ -613,7 +670,7 @@ body {
 	width: 100%;
 }
 
-#app-contact-action-call .contact-infos .contact-number:before{
+#app-contact-action-call .contact-infos .contact-number:before {
 	content: '#';
 }
 
@@ -649,7 +706,6 @@ body {
 	animation: circle-light-2 1s infinite, circle-light-reverse-2 1s infinite;
 }
 
-
 #app-contact-action-call .loader .circle:nth-child(3) {
 	top: 70%;
 	animation: circle-light-3 1s infinite, circle-light-reverse-3 1s infinite;
@@ -680,7 +736,7 @@ body {
 	color: #FFF;
 }
 
-#app-contact-action-message .message-container  {
+#app-contact-action-message .message-container {
 	width: 100%;
 	min-height: 305px;
 }
@@ -737,22 +793,22 @@ body {
 }
 
 #app-bank .logo {
-  width: 100%;
-  text-align: center;
+	width: 100%;
+	text-align: center;
 	margin-top: 20px;
 }
 
 #app-bank .balance {
 	width: 100%;
-  text-align: center;
-  margin-top: 50px;
-  color: #02900e;
-  font-size: 2em;
+	text-align: center;
+	margin-top: 50px;
+	color: #02900e;
+	font-size: 2em;
 }
 
 #app-bank .balance:after {
 	content: ' $';
-  font-size: 0.6em;
+	font-size: 0.6em;
 }
 
 #app-bank .balance.positive:before {
@@ -766,8 +822,8 @@ body {
 #app-bank .button-container {
 	width: 100%;
 	display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
+	flex-direction: column-reverse;
+	align-items: center;
 }
 
 #app-bank .button {
@@ -781,9 +837,7 @@ body {
 	margin: 5px;
 }
 
-#app-bank .button.selected {
-
-}
+#app-bank .button.selected {}
 
 /* App : Bank Transfer */
 
@@ -814,8 +868,8 @@ body {
 
 #app-bank-transfer-menu .transfer-wrapper {
 	width: 100%;
-  margin-top: 200px;
-  transform: translateY(-50%);
+	margin-top: 200px;
+	transform: translateY(-50%);
 }
 
 #app-bank-transfer-menu .transfer-wrapper div {

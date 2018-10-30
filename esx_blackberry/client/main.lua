@@ -17,27 +17,21 @@ end
 
 RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function(xPlayer)
-
 	for i=1, #xPlayer.inventory, 1 do
-
 		local item = xPlayer.inventory[i]
 
 		if item.name == 'blackberry' and item.count > 0 then
 			ShowDeepWebIcon()
 			break
 		end
-
 	end
-
 end)
 
 RegisterNetEvent('esx_blackberry:onHasBlackberry')
 AddEventHandler('esx_blackberry:onHasBlackberry', function(hasBlackberry)
-
 	if hasBlackberry then
 		ShowDeepWebIcon()
 	else
 		HideDeepWebIcon()
 	end
-
 end)

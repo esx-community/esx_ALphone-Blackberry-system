@@ -1,13 +1,13 @@
-(function(){
+(function () {
 
 	Phone.apps['bank-transfer-menu'] = {};
-	const app                        = Phone.apps['bank-transfer-menu'];
+	const app = Phone.apps['bank-transfer-menu'];
 	let currentPlayer;
 
-	app.open = function(player) {
+	app.open = function (player) {
 
 		currentPlayer = player;
-		const elems   = $('#app-bank-transfer-menu .transfer-wrapper div input')
+		const elems = $('#app-bank-transfer-menu .transfer-wrapper div input')
 
 		elems.val('');
 
@@ -19,24 +19,24 @@
 
 	}
 
-	app.close = function() {
+	app.close = function () {
 		$.post('http://esx_phone3/release_focus');
 		return true;
 	}
 
-	app.move = function(direction) {
+	app.move = function (direction) {
 
 	}
 
-	app.enter = function() {
+	app.enter = function () {
 
 		const elems = $('#app-bank-transfer-menu .transfer-wrapper div input')
 
-		for(let i=0; i<elems.length; i++) {
+		for (let i = 0; i < elems.length; i++) {
 
-			if($(elems[i]).is(':focus') && $(elems[i]).val().trim() != '') {
+			if ($(elems[i]).is(':focus') && $(elems[i]).val().trim() != '') {
 
-				if(typeof elems[i + 1] != 'undefined')
+				if (typeof elems[i + 1] != 'undefined')
 					$(elems[i + 1]).focus();
 				else
 					app.submit();
@@ -48,7 +48,7 @@
 
 	}
 
-	app.submit = function() {
+	app.submit = function () {
 
 		const amount = $('#app-bank-transfer-menu input[name="transfer-amount"]').val();
 
@@ -61,7 +61,7 @@
 		Phone.close();
 	}
 
-	app.selectElem = function(elem) {
+	app.selectElem = function (elem) {
 
 	}
 

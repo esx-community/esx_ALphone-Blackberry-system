@@ -103,11 +103,11 @@
 				break;
 			}
 
-	    // ENTREE
-	    case 13: {
-	    	Phone.enter();
-	    	break;
-	    }
+			// ENTER
+			case 13: {
+				Phone.enter();
+				break;
+			}
 
 /*	    // G
 	    case 71: {
@@ -283,8 +283,7 @@
 		if(data.onPlayers === true) {
 			switch(data.reason) {
 
-				case 'bank_transfer' : {
-
+				case 'bank_transfer': {
 					Phone.open('bank-transfer', data.players)
 
 					break;
@@ -306,12 +305,10 @@
 	$('.app').addClass('animated zoomIn');
 
 	setInterval(() => {
-
 		const date = new Date;
 
 		$('.status-bar .time .hour')  .text(date.getHours()  .toString().padStart(2, '0'));
 		$('.status-bar .time .minute').text(date.getMinutes().toString().padStart(2, '0'));
-
 	}, 1000);
 
 })();
