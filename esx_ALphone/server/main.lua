@@ -258,11 +258,15 @@ AddEventHandler('esx_phone:registerNumber', function(number, type, sharePos, has
 end)
 
 AddEventHandler('esx_phone:addSource', function(number, source)
-	PhoneNumbers[number].sources[tostring(source)] = true
+	if tostring(source) then
+		PhoneNumbers[number].sources[tostring(source)] = true
+	end
 end)
 
 AddEventHandler('esx_phone:removeSource', function(number, source)
-	PhoneNumbers[number].sources[tostring(source)] = nil
+	if tostring(source) then
+		PhoneNumbers[number].sources[tostring(source)] = nil
+	end
 end)
 
 RegisterServerEvent('esx_phone:addPlayerContact')
