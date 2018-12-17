@@ -12,13 +12,10 @@ local Keys = {
 
 local GUI                        = {}
 local PhoneData                  = {phoneNumber = 0, contacts = {}}
-local RegisteredMessageCallbacks = {}
-local ContactJustAdded           = false
 local CurrentAction              = nil
 local CurrentActionMsg           = ''
 local CurrentActionData          = {}
 local CurrentDispatchRequestId   = -1
-local PhoneNumberSources         = {}
 local CellphoneObject            = nil
 local CallStartTime              = nil
 local OnCall                     = false
@@ -38,19 +35,19 @@ Citizen.CreateThread(function()
 end)
 
 function OpenPhone()
-	GUI.IsOpen      = true
-	GUI.HasFocus    = false
-	local playerPed = PlayerPedId()
+	GUI.IsOpen   = true
+	GUI.HasFocus = false
 
 	TriggerServerEvent('esx_phone:reload', PhoneData.phoneNumber)
 
 	SendNUIMessage({
 		showPhone = true
 	})
-		
+
+	local playerPed  = PlayerPedId()
 	local coords     = GetEntityCoords(playerPed)
 	local bone       = GetPedBoneIndex(playerPed, 28422)
-	local phoneModel = GetHashKey('prop_npc_phone_02')
+	local phoneModel = 'prop_npc_phone_02'
 
 	Citizen.CreateThread(function()
 		RequestAnimDict('cellphone@')
@@ -60,13 +57,10 @@ function OpenPhone()
 
 		TaskPlayAnim(playerPed, 'cellphone@', 'cellphone_call_listen_base', 1.0, -1, -1, 50, 0, false, false, false)
 
-		RequestModel(phoneModel)
-		while not HasModelLoaded(phoneModel) do
-			Citizen.Wait(0)
-		end
-
-		local CellphoneObject = CreateObject(phoneModel, coords.x, coords.y, coords.z, 1, 1, 0)
-		AttachEntityToEntity(CellphoneObject, playerPed, bone, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1, 1, 0, 0, 2, 1)
+		ESX.Game.SpawnObject(phoneModel, coords, function(object)
+			AttachEntityToEntity(object, playerPed, bone, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, true, true, false, false, 2, true)
+			CellphoneObject = object
+		end)
 	end)
 
 end
