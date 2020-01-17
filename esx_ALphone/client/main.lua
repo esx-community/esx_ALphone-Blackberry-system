@@ -1,23 +1,7 @@
-local Keys = {
-  ["ESC"] = 322, ["F1"] = 288, ["F2"] = 289, ["F3"] = 170, ["F5"] = 166, ["F6"] = 167, ["F7"] = 168, ["F8"] = 169, ["F9"] = 56, ["F10"] = 57,
-  ["~"] = 243, ["1"] = 157, ["2"] = 158, ["3"] = 160, ["4"] = 164, ["5"] = 165, ["6"] = 159, ["7"] = 161, ["8"] = 162, ["9"] = 163, ["-"] = 84, ["="] = 83, ["BACKSPACE"] = 177,
-  ["TAB"] = 37, ["Q"] = 44, ["W"] = 32, ["E"] = 38, ["R"] = 45, ["T"] = 245, ["Y"] = 246, ["U"] = 303, ["P"] = 199, ["["] = 39, ["]"] = 40, ["ENTER"] = 18,
-  ["CAPS"] = 137, ["A"] = 34, ["S"] = 8, ["D"] = 9, ["F"] = 23, ["G"] = 47, ["H"] = 74, ["K"] = 311, ["L"] = 182,
-  ["LEFTSHIFT"] = 21, ["Z"] = 20, ["X"] = 73, ["C"] = 26, ["V"] = 0, ["B"] = 29, ["N"] = 249, ["M"] = 244, [","] = 82, ["."] = 81,
-  ["LEFTCTRL"] = 36, ["LEFTALT"] = 19, ["SPACE"] = 22, ["RIGHTCTRL"] = 70,
-  ["HOME"] = 213, ["PAGEUP"] = 10, ["PAGEDOWN"] = 11, ["DELETE"] = 178,
-  ["LEFT"] = 174, ["RIGHT"] = 175, ["TOP"] = 27, ["DOWN"] = 173,
-  ["NENTER"] = 201, ["N4"] = 108, ["N5"] = 60, ["N6"] = 107, ["N+"] = 96, ["N-"] = 97, ["N7"] = 117, ["N8"] = 61, ["N9"] = 118
-}
-
-local GUI                        = {}
+local GUI, CurrentActionData = {}, {}
 local PhoneData                  = {phoneNumber = 0, contacts = {}}
-local CurrentAction              = nil
-local CurrentActionMsg           = ''
-local CurrentActionData          = {}
 local CurrentDispatchRequestId   = -1
-local CellphoneObject            = nil
-local CallStartTime              = nil
+local CellphoneObject, CallStartTime, CurrentAction, CurrentActionMsg
 local OnCall                     = false
 local GUI                        = {}
 GUI.IsOpen                       = false
@@ -62,7 +46,6 @@ function OpenPhone()
 			CellphoneObject = object
 		end)
 	end)
-
 end
 
 function ClosePhone()
@@ -347,38 +330,37 @@ Citizen.CreateThread(function()
 
 		if GUI.IsOpen then
 
-			if IsControlJustReleased(0, Keys['TOP']) then
+			if IsControlJustReleased(0, 27) then
 				SendNUIMessage({
 					controlPressed = true,
 					control        = 'TOP'
 				})
-			elseif IsControlJustReleased(0, Keys['DOWN']) then
+			elseif IsControlJustReleased(0, 173) then
 				SendNUIMessage({
 					controlPressed = true,
 					control        = 'DOWN'
 				})
-			elseif IsControlJustReleased(0, Keys['LEFT']) then
+			elseif IsControlJustReleased(0, 174) then
 				SendNUIMessage({
 					controlPressed = true,
 					control        = 'LEFT'
 				})
-			elseif IsControlJustReleased(0, Keys['RIGHT']) then
+			elseif IsControlJustReleased(0, 175) then
 				SendNUIMessage({
 					controlPressed = true,
 					control        = 'RIGHT'
 				})
-			elseif IsControlJustReleased(0, Keys['ENTER']) then
+			elseif IsControlJustReleased(0, 18) then
 				SendNUIMessage({
 					controlPressed = true,
 					control        = 'ENTER'
 				})
-			elseif IsControlJustReleased(0, Keys['BACKSPACE']) then
+			elseif IsControlJustReleased(0, 177) then
 				SendNUIMessage({
 					controlPressed = true,
 					control        = 'BACKSPACE'
 				})
 			end
-
 		end
 
 		if GUI.HasFocus then -- codes here: https://pastebin.com/guYd0ht4
@@ -401,14 +383,14 @@ Citizen.CreateThread(function()
 			DisableControlAction(0, 16,   true) -- Select Next Weapon
 			DisableControlAction(0, 17,   true) -- Select Prev Weapon
 		else
-			if IsDisabledControlJustReleased(0, Keys['1']) then
+			if IsDisabledControlJustReleased(0, 157) then
 				if not GUI.IsOpen then
 					ESX.UI.Menu.CloseAll()
 					ESX.UI.Menu.Open('phone', GetCurrentResourceName(), 'main')
 				end
 			end
 
-			if IsControlJustReleased(0, Keys['U']) and GUI.IsOpen then
+			if IsControlJustReleased(0, 303) and GUI.IsOpen then
 				SendNUIMessage({
 					activateGPS = true
 				})
@@ -425,7 +407,7 @@ Citizen.CreateThread(function()
 		if CurrentAction ~= nil then
 			ESX.ShowHelpNotification(CurrentActionMsg)
 
-			if IsControlJustReleased(0, Keys['E']) then
+			if IsControlJustReleased(0, 38) then
 				if CurrentAction == 'dispatch' then
 					TriggerServerEvent('esx_phone:stopDispatch', CurrentDispatchRequestId)
 					SetNewWaypoint(CurrentActionData.position.x,  CurrentActionData.position.y)
